@@ -12,14 +12,14 @@ import pages.TextBoxPage;
 
 public class TextBoxTest extends TestCase {
 	// TC1-submitSuccessfully
-	@Test(description = "TC1 - submit Successfully")
-	public void submitSuccessfully() {
-		String inputFullName = "Hien";
-		String inputEmailName = "hien@gmail.com";
-		String inputCurrentAddress = "Đông Anh";
-		String inputPermanentAddress = "Hà nội - Việt Nam";
-		
-		openWebsite();
+	@Test(description = "TC1 - submit Successfully", dataProvider = "InputData", groups = "Smoke Test")
+	public void submitSuccessfully(String inputFullName, String inputEmailName, String inputCurrentAddress, String inputPermanentAddress) {
+//		String inputFullName = "Hien";
+//		String inputEmailName = "hien@gmail.com";
+//		String inputCurrentAddress = "Đông Anh";
+//		String inputPermanentAddress = "Hà nội - Việt Nam";
+//	
+		//openWebsite();
 		HomePage homePage = new HomePage(testBase.driver);
 		
 		ElementsPage elementsPage = homePage.clickOnElementsMenu();
@@ -38,6 +38,11 @@ public class TextBoxTest extends TestCase {
 		assertEquals(textBoxPage.getTextAfterSubmit(textBoxPage.locPermanentAddress_Displayed),inputPermanentAddress);
 
 	}
+	@Test
+	public void test2() {}
+	
+	@Test
+	public void test3() {}
 
 //	// TC2-Email format is wrong
 //	@Test(description = "TC2 - Email format is wrong")

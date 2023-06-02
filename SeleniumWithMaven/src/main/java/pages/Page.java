@@ -16,6 +16,11 @@ public class Page {
 		testBase.driver= dr;
 		
 	}
+	// clear data
+	public void clearData() {
+		driver.navigate().refresh();
+		
+	}
 	
 
 

@@ -15,8 +15,8 @@ public	By locTextBoxMenu = By.xpath("//div[@class='element-list collapse show']/
 	
 	public TextBoxPage clickOnTextBoxMenu() {
 		testBase.click(driver,locTextBoxMenu);
-		//driver.findElement(locTextBoxMenu).click();
 		return new TextBoxPage(driver);
+		//driver.navigate().refresh();
 	}
 
 }

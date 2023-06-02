@@ -1,19 +1,26 @@
 package tests;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+
 import common.TestBase;
 
 public class TestCase {
 	// biến global
 	public TestBase testBase = new TestBase();
-
-	public void openWebsite() {
+	
+	@BeforeMethod
+	@Parameters("browser")
+	public void openWebsite(String browserName) {
 		// call method from TestBase.java
-		testBase.openWebWithSingeBrowser("chrome");
+		testBase.openWebWithSingeBrowser(browserName);
 		//testBase.openWebsite("https://demoqa.com/");
-
 	}
+	
+	@AfterMethod
 	public void closeBrowser() {
-		testBase.driver.close();
+		testBase.driver.quit();
 	}
 
 }

@@ -25,7 +25,7 @@ public class TestBase {
 		if (browserName.equalsIgnoreCase("chrome")) {
 
 			System.setProperty("webdriver.chrome.driver",
-					"D:\\1Auto2023\\05Project\\03Git\\Seleniumautometion\\SeleniumWithJavaBasic\\src\\drivers\\chromedriver.exe");
+					"D:\\1Auto2023\\05Project\\03Git\\SeleniumAutomation\\SeleniumWithMaven\\test_driver\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			// Todo
