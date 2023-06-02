@@ -89,10 +89,12 @@ public class PractiveForm {
 			testBase.dr.findElement(By.xpath("//label[normalize-space()='Reading']")).click();
 		}
 		
+		//C1:Zoom in/out screen thành 80%
 		JavascriptExecutor js = (JavascriptExecutor) testBase.dr;	
 //		js.executeScript("arguments[0].scrollIntoView(true);", testBase.dr.findElement(By.id("submit")));//scoll xuống element cần hiển thị
 		js.executeScript("document.body.style.zoom = '0.8'"); //C1:Zoom in/out screen thành 80%	
 		
+		//C2 zoom screen = 70%
 		//((IJavaScriptExecutor) Browser.Driver).ExecuteScript("document.body.style.zoom = '70%';");//C2 zoom screen = 70%
 		
 						
